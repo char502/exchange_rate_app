@@ -1,8 +1,14 @@
 import React from "react";
 // import ApiResults from "./ApiResults";
 
-const apiUrl =
-  "http://data.fixer.io/api/latest?access_key=ff94c304d79ade79928ce736041bfd70";
+const apiUrl = "https://api.exchangeratesapi.io/latest?base=GBP";
+
+// http://data.fixer.io/api/latest?access_key=ff94c304d79ade79928ce736041bfd70
+
+// Alternative - 'https://api.exchangeratesapi.io/latest?base=GBP' - rates are from European cantral bank
+// website - https://exchangeratesapi.io/
+
+// Append to end of apiURL to limit returns - '& symbols=GBP, USD, CAD, JPY'
 
 class RequestExchange extends React.Component {
   constructor(props) {
@@ -30,7 +36,7 @@ class RequestExchange extends React.Component {
     const { isLoaded, items } = this.state;
 
     console.log(this.state);
-    // console.log(items);
+    console.log(items);
     // console.log(typeof items);
     // let rates = items.rates;
     // console.log(rates);
