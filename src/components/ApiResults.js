@@ -1,5 +1,5 @@
 import React from "react";
-import RequestExchange from "./RequestExchange";
+// import RequestExchange from "./RequestExchange";
 
 class ApiResults extends React.Component {
   render() {

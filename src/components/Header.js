@@ -6,7 +6,7 @@ import RequestExchange from "./RequestExchange";
 const Header = (props) => (
   <div>
     <Title title={props.title} />
-    {/* <Clock /> */}
+    <Clock />
     <RequestExchange />
   </div>
 );
