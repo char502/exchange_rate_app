@@ -66,7 +66,7 @@ class RequestExchange extends React.Component {
             ))} */}
             {Object.keys(items.rates).map((key, index) => (
               <li key={index}>
-                Code: {key}, Rate: {items.rates[key]}
+                Country Code: {key}, Rate: {items.rates[key]}
               </li>
             ))}
           </ul>
