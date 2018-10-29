@@ -1,4 +1,4 @@
-const apiUrl = "https://api.exchangeratesapi.io/latest?base=GBP";
+// const apiUrl = "https://api.exchangeratesapi.io/latest?base=GBP";
 
 // function fetchSomeRates() {
 //   return fetch(apiUrl)

@@ -42,9 +42,9 @@ class ExchangeRateList extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  rates: state.rates.items
-  // loading: state.rates.loading,
-  // error: state.rates.error
+  rates: state.rates.items,
+  loading: state.rates.loading,
+  error: state.rates.error
 });
 
 // console.log(rates);

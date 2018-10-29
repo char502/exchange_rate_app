@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers/rootReducer";
 
-import Header from "./components/Header";
+// import Header from "./components/Header";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 // console.log(store.getState());
