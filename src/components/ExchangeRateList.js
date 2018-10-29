@@ -29,13 +29,13 @@ class ExchangeRateList extends React.Component {
 
     return (
       <ul>
-        {rates.map((rate) => (
+        {/* {rates.map((rate) => (
           <li key={rate.id}>{rate.name}</li>
-        ))}
-        {/* Object.keys(items.rates).map((key, index) => (
+        ))} */}
+        Object.keys(items.rates).map((key, index) => (
         <li key={index}>
           Country Code: {key}, Rate: {items.rates[key]}
-        </li> */}
+        </li>
       </ul>
     );
   }
