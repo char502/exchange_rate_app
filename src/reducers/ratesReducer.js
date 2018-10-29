@@ -2,7 +2,7 @@ import {
   FETCH_EXCHANGERATE_BEGIN,
   FETCH_EXCHANGERATE_SUCCESS,
   FETCH_EXCHANGERATE_FAILURE
-} from "../actions/ratesActions";
+} from "../actions/index";
 
 const initialState = {
   items: [],

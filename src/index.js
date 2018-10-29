@@ -3,8 +3,20 @@ import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import reducer from "./reducers/index";
+import ratesReducer from "./reducers/ratesReducer";
 // import configureStore from "./store/configureStore";
+
+let store = createStore(ratesReducer);
+// console.log(store.getState());
+
+// const containerStore = <Provider store={store} />;
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Header />
+  </Provider>,
+  document.getElementById("root")
+);
 
 // const element = <h1>Hello</h1>;
 // console.log(element);
@@ -32,15 +44,3 @@ import reducer from "./reducers/index";
 // The setInterval() method repeats a given function at every given time-interval.
 
 // In react would be better to use state but this just shows a setInterval example
-
-const store = createStore(reducer);
-console.log(store.getState());
-
-// const containerStore = <Provider store={store} />;
-
-ReactDOM.render(
-  <Provider store={store}>
-    <Header />
-  </Provider>,
-  document.getElementById("root")
-);

@@ -2,7 +2,7 @@ import {
   fetchExchangeBegin,
   fetchExchangeSuccess,
   fetchExchangeError
-} from "../actions/ratesActions";
+} from "../actions/index";
 
 const apiUrl = "https://api.exchangeratesapi.io/latest?base=GBP";
 
@@ -19,7 +19,7 @@ export function fetchExchangeRates() {
       .catch((error) => dispatch(fetchExchangeError(error)));
   };
 }
-
+// console.log(fetchExchangeRates(rates));
 // Handle HTTP errors since fetch won't.
 function handleErrors(response) {
   if (!response.ok) {
