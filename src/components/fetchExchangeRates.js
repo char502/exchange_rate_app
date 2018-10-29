@@ -12,9 +12,9 @@ export function fetchExchangeRates() {
     return fetch(apiUrl)
       .then(handleErrors)
       .then((response) => response.json())
-      .then((json) => {
-        dispatch(fetchExchangeSuccess(json.rates));
-        return json.rates;
+      .then((data) => {
+        dispatch(fetchExchangeSuccess(data));
+        return data;
       })
       .catch((error) => dispatch(fetchExchangeError(error)));
   };

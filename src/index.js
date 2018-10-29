@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import ratesReducer from "./reducers/ratesReducer";
 // import configureStore from "./store/configureStore";
 
-let store = createStore(ratesReducer);
+let store = createStore(ratesReducer, applyMiddleware(thunk));
 // console.log(store.getState());
 
 // const containerStore = <Provider store={store} />;
