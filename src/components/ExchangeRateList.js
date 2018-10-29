@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchExchangeRates } from "./fetchExchangeRates";
+import { fetchRates } from "../actions/ratesActions";
 
 // import { ratesReducer } from "../reducers/index";
 // import * as actionCreators from "../actions/index";
@@ -10,7 +10,7 @@ import { fetchExchangeRates } from "./fetchExchangeRates";
 
 class ExchangeRateList extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchExchangeRates());
+    this.props.dispatch(fetchRates());
   }
 
   render() {
@@ -29,9 +29,9 @@ class ExchangeRateList extends React.Component {
 
     return (
       <ul>
-        {/* {rates.map((rate) => (
+        {rates.map((rate) => (
           <li key={rate.id}>{rate.name}</li>
-        ))} */}
+        ))}
         {/* Object.keys(items.rates).map((key, index) => (
         <li key={index}>
           Country Code: {key}, Rate: {items.rates[key]}
@@ -41,14 +41,13 @@ class ExchangeRateList extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    rates: state.rates
-    // loading: state.rates.loading,
-    // error: state.rates.error
-  };
-};
-console.log(rates);
+const mapStateToProps = (state) => ({
+  rates: state.rates.items
+  // loading: state.rates.loading,
+  // error: state.rates.error
+});
+
+// console.log(rates);
 
 // items: action.payload.products;
 

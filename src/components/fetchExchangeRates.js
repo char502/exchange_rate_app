@@ -2,7 +2,7 @@ import {
   fetchExchangeBegin,
   fetchExchangeSuccess,
   fetchExchangeError
-} from "../actions/index";
+} from "../actions/ratesActions";
 
 const apiUrl = "https://api.exchangeratesapi.io/latest?base=GBP";
 
