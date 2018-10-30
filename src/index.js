@@ -1,17 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ExchangeRateList from "./components/ExchangeRateList";
-import { createStore, applyMiddleware } from "redux";
+// import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
-import thunk from "redux-thunk";
-import rootReducer from "./reducers/rootReducer";
+// import thunk from "redux-thunk";
+// import rootReducer from "./reducers/rootReducer";
+import configureStore from "./store/store";
 
 // import Header from "./components/Header";
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+// const store = createStore(rootReducer, applyMiddleware(thunk));
 // console.log(store.getState());
 
 // const containerStore = <Provider store={store} />;
+
+const store = configureStore();
 
 function App() {
   return (

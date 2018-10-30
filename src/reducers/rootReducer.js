@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import rates from "./ratesReducer";
+import data from "./ratesReducer";
 
 // const store = createStore(
 //   combineReducers({
@@ -8,5 +8,5 @@ import rates from "./ratesReducer";
 // );
 
 export default combineReducers({
-  rates
+  data
 });

@@ -3,17 +3,17 @@
 
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import rootReducer from "./reducers/RootReducer";
+import rootReducer from "../reducers/rootReducer";
 
-const initialState = {
-  items: [],
-  loading: false,
-  error: null
-};
+// const initialState = {
+//   items: [],
+//   loading: false,
+//   error: null
+// };
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+// const store = createStore(rootReducer, applyMiddleware(thunk));
 
-export default function configureStore(initialState) {
+export default function configureStore() {
   return createStore(rootReducer, applyMiddleware(thunk));
 }
 
@@ -29,7 +29,7 @@ export default function configureStore(initialState) {
 //   return store;
 // };
 
-const store = createStore(
-  reducer /* preloadedState, */,
-  +window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+// const store = createStore(
+//   reducer /* preloadedState, */,
+//   +window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+// );

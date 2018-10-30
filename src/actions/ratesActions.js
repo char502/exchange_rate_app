@@ -14,8 +14,9 @@ export function fetchRates() {
         // .then(handleErrors)
         // .then((res) => res.json())
         .then((data) => {
-          dispatch(fetchExchangeSuccess(data.rates));
-          return data.rates;
+          dispatch(fetchExchangeSuccess(data));
+          // console.log(data);
+          return data;
         })
         .catch((error) => dispatch(fetchExchangeError(error)))
     );
@@ -38,9 +39,9 @@ export const fetchExchangeBegin = () => ({
   type: FETCH_EXCHANGERATE_BEGIN
 });
 
-export const fetchExchangeSuccess = (rates) => ({
+export const fetchExchangeSuccess = (data) => ({
   type: FETCH_EXCHANGERATE_SUCCESS,
-  payload: { rates }
+  payload: { data }
 });
 
 export const fetchExchangeError = (error) => ({

@@ -27,7 +27,7 @@ export default function ratesReducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        items: action.payload.rates
+        items: action.payload.data
       };
 
     case FETCH_EXCHANGERATE_FAILURE:
