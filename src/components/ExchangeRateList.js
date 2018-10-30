@@ -49,7 +49,7 @@ const mapStateToProps = (state) => ({
   error: state.rates.error
 });
 
-// console.log(state);
+// console.log(items);
 
 // items: action.payload.products;
 
