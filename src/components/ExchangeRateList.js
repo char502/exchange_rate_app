@@ -29,8 +29,10 @@ class ExchangeRateList extends React.Component {
 
     return (
       <ul>
-        {rates.map((rate) => (
-          <li key={rate.id}>{rate.name}</li>
+        {Object.keys(rates).map((key, index) => (
+          <li key={index}>
+            Country code: {key}, Rate: {rates[key]}
+          </li>
         ))}
         {/* Object.keys(items.rates).map((key, index) => (
         <li key={index}>
@@ -47,7 +49,7 @@ const mapStateToProps = (state) => ({
   error: state.rates.error
 });
 
-// console.log(rates);
+// console.log(state);
 
 // items: action.payload.products;
 
