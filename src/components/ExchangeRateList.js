@@ -16,6 +16,7 @@ class ExchangeRateList extends React.Component {
   simpleAction = (e) => {
     this.props.simpleAction();
   };
+
   render() {
     const { error, loading, items } = this.props;
 
@@ -27,6 +28,19 @@ class ExchangeRateList extends React.Component {
       return <div>Loading...</div>;
     }
 
+    // console.log(items);
+    // let rates = items.rates;
+    // console.log(rates);
+
+    // let test2 = Object.keys(items);
+    // console.log(test2);
+
+    // let rates = items.rates;
+    // console.log(rates);
+
+    // console.log(this.props);
+    console.log(items);
+    console.log(Object.keys(items));
     // let test = Object.(data);
     // console.log(test);
 
@@ -36,39 +50,48 @@ class ExchangeRateList extends React.Component {
     // let test = Object.entries(items)[1];
     // console.log(test);
 
-    console.log(JSON.parse(JSON.stringify(items)));
-
-    // let test = Object.entries(data);
+    // let test = items.rates;
     // console.log(test);
 
-    // console.log(typeof data);
-
-    // let test = data.rates;
-    // console.log(test);
-
-    // let test = Object.entries(data)[1];
-    // console.log(test);
-
-    // let rates = items.rates;
-    // console.log(rates);
-
-    // let keys = Object.entries(items);
-    // console.log(keys);
-
-    // let otherTest = Object.values(items);
+    // let otherTest = items;
     // console.log(otherTest);
 
-    // let otherEnt = Object.entries(items);
-    // console.log(otherEnt);
+    // let fgh = Object.keys(items);
+    // console.log(fgh);
+    // const result = Object.keys(items.rates).map((item, index) => (
+    //   <li key={index}>
+    //     {item[0]} = {item[1]}
+    //   </li>
+    // ));
 
-    // let test = Object.keys(items);
-    // console.log(test);
+    // const result = JSON.stringify(items.rates);
+    // console.log(result);
+    // let output = Object.keys(items.rates).map((key) => {
+    //   return {
+    //     key: key,
+    //     value: items.rates[key]
+    //   };
+    // });
 
     return (
       <div>
         {/* {console.log(items.rates)} */}
         <p>The base rate is: {items.base}</p>
+        {/* {output} */}
 
+        {/* {Object.keys(items).map((key, index) => (
+          <li key={index}>
+            {" "}
+            {key}: {items[key]}
+          </li>
+        ))} */}
+        {/* {Object.values(items.rates).map((item, index) => (
+          <li key={index}>
+            {item[0]} = {item[1]}
+          </li>
+        ))} */}
+
+        {/* <p>rates are: {items.rates.CAD}</p> */}
         {/* {Object.keys(data)} */}
         {/* let otherTest = Object.values(items);
         console.log(otherTest);
@@ -84,7 +107,7 @@ class ExchangeRateList extends React.Component {
           ))}
         </ul> */}
         {/* <ul>
-          {Object.entries(data.rates).map((item, index) => (
+          {Object(items.rates).map((item, index) => (
             <li key={index}>
               {item[0]} = {item[1]}
             </li>
