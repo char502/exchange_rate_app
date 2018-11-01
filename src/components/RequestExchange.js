@@ -35,14 +35,14 @@ class RequestExchange extends React.Component {
   render() {
     const { isLoaded, items } = this.state;
 
-    console.log(this.state);
-    console.log(items);
+    // console.log(this.state);
+    // console.log(items);
     // console.log(typeof items);
     // let rates = items.rates;
     // console.log(rates);
 
-    // let test = Object.keys(items);
-    // console.log(test);
+    let test = Object.keys(items);
+    console.log(test);
 
     // let otherTest = Object.values(items);
     // console.log(otherTest);

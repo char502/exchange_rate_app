@@ -73,11 +73,27 @@ class ExchangeRateList extends React.Component {
     //   };
     // });
 
+    console.log(items.rates);
+
     return (
       <div>
         {/* {console.log(items.rates)} */}
         <p>The base rate is: {items.base}</p>
         {/* {output} */}
+        <ul>
+          {Object.keys(items.rates).map((key, index) => (
+            <li key={index}>
+              Country code: {key}, Rate: {items.rates[key]}
+            </li>
+          ))}
+        </ul>
+        {/* <ul>
+          {Object(items.rates).map((item, index) => (
+            <li key={index}>
+              {item[0]} = {item[1]}
+            </li>
+          ))}
+        </ul> */}
 
         {/* {Object.keys(items).map((key, index) => (
           <li key={index}>
